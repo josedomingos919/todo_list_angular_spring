@@ -48,3 +48,33 @@
     cursor: pointer;
     border-radius: 4px;
 }
+
+.task-list {
+    list-style: none;
+    padding: 0px;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgb(0,0,0,0.1);
+}
+
+.task-list button {
+    border: none;
+    color: white;
+    padding: 10px 13px;
+    background-color: #f25f6e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: #d6d6d6;
+}
