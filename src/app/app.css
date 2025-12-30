@@ -1,0 +1,50 @@
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Ancizar Serif", serif;
+}
+
+.title h1 {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.title i {
+    margin: 0px;
+    font-size: 32px;
+}
+
+.todo-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgb(0,0,0,0.1);
+    border-radius: 9px;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.add-task input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.add-task button {
+    padding: 10px 15px;
+    background-color: #55c36f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
