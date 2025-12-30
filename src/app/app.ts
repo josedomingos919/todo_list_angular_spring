@@ -19,4 +19,18 @@ export class App {
 
   todoList: TodoItem[] = [];
   newTask: string = '';
+
+  addTask(): void {
+    if (this.newTask.trim() !== '') {
+      const newTodoItem: TodoItem = {
+        id: Date.now(),
+        completed: false,
+        task: this.newTask,
+      };
+
+      this.todoList.push(newTodoItem);
+
+      this.newTask = '';
+    }
+  }
 }

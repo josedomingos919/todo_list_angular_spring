@@ -6,7 +6,7 @@
   </div>
   <div class="add-task">
     <input type="text" [(ngModel)]="newTask" placeholder="Nova tarefa" />
-    <button><i class="bi bi-plus-circle"></i></button>
+    <button (click)="addTask()"><i class="bi bi-plus-circle"></i></button>
     <!-- <i class="bi bi-trash-fill"></i> -->
   </div>
 </main>
