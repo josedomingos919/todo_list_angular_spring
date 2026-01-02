@@ -21,6 +21,14 @@ export class App {
   todoList: TodoItem[] = [];
   newTask: string = '';
 
+  ngOnInit() {
+    const saved = localStorage.getItem('@todoList');
+
+    if (saved) {
+      this.todoList = JSON.parse(saved);
+    }
+  }
+
   addTask(): void {
     if (this.newTask.trim() !== '') {
       const newTodoItem: TodoItem = {
@@ -30,8 +38,9 @@ export class App {
       };
 
       this.todoList.push(newTodoItem);
-
       this.newTask = '';
+
+      localStorage.setItem('@todoList', JSON.stringify(this.todoList));
     }
   }
 
@@ -41,9 +50,11 @@ export class App {
 
   toggleComplete(index: number): void {
     this.todoList[index].completed = !this.todoList[index].completed;
+    localStorage.setItem('@todoList', JSON.stringify(this.todoList));
   }
 
   deleteTask(id: number): void {
     this.todoList = this.todoList.filter((e) => e.id !== id);
+    localStorage.setItem('@todoList', JSON.stringify(this.todoList));
   }
 }
